@@ -1,0 +1,56 @@
+<header class="yui3-g">
+	
+	<div id="logo">
+		<img class="yui3-u-4-5">
+			<% if mobile_device? %>
+				<!-- smaller logo image goes here -->
+				<% logo = image_tag("title.png", :alt => "Book of Jack", :class => "round") %>
+				<%= link_to logo, root_path %>
+			<% else %>
+				<% logo = image_tag("title.png", :alt => "Book of Jack", :class => "round") %>
+				<%= link_to logo, root_path %>
+			<% end %>
+		</img>
+	</div>
+	
+	<hgroup id="hgroup">
+		<h1><span>The Book of Jack</span></h1>
+  	<h2><span>An entertaining exploration of all things Jack</span></h2>
+  </hgroup> <!-- end hgroup -->
+
+  <nav id="top-nav" class="yui3-u-1-5 round">
+		<ul class="yui3-u-1-2">
+			<li>
+				<% if mobile_device? %>
+        	<%= link_to "Desktop", :mobile => 0 %>
+      	<% else %>
+        	<%= link_to "Mobile", :mobile => 1 %>
+      		<% end %>
+			</li>
+			<li><%= link_to "About", about_path %></li>
+  		<li><%= link_to "Contact", contact_path %></li>
+		</ul>
+		
+		<ul class="yui3-u-1-2">
+			<li><%= link_to "RSS", '#' %></li>
+			<li><%= link_to "Twitter", '#' %></li>		
+		</ul>	
+	</nav>		
+	
+  <nav id="sign-up-in-out" class="yui3-u-1-5 round">
+		<ul class="yui3-u-1">
+      <% if signed_in? %>
+      	<li><%= link_to "SignOut", signout_path, :method => :delete %></li>
+      <% else %>
+				<li><%= link_to "SignUp", signup_path %></li>
+      	<li><%= link_to "SignIn", signin_path %></li>
+      <% end %>
+      <% if signed_in? %>
+      	<li><%= link_to "Profile", current_user %></li>
+	      <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+				<li><%= link_to "Users", users_path %></li>
+      <% end %>
+		</ul>
+	</nav>
+		
+</header>

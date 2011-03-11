@@ -1,0 +1,13 @@
+<div class="yui3-u-1">
+	
+	<div id="signup" class="yui3-u-11-24 gutter"> <!-- Two controllers can share a set of partials and render them like this:
+This will render the partial “advertisement/_ad.erb“ regardless of which controller this is being 	called from. -->		
+		<%= render :partial => "users/new", :locals => { :new => @users } %>
+	</div> <!-- end class yui3-u-11-24 gutter -->
+
+	<div id="signin" class="yui3-u-11-24">
+		<%= render 'sessions/new' %>
+	</div> <!-- end class yui3-u-11-24 -->
+	
+</div>
+

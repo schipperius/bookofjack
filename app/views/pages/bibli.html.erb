@@ -1,0 +1,80 @@
+<article id="main" class="yui3-u-13-24 gutter"> <!-- id of main initiates the accordion javaScript for the navigation menu-->
+	
+	<div class="yui3-u-1"> <!-- first -->
+		
+		<h1>Bibliography</h1>
+		
+		<p class="first"><span class="a">A</span><span class="firstLine">n enumerative bibliography </span>also called compilative, reference or systematic, is an overview of publications within a particular category. The following books have been read and reread many times. I highly recommend these titles as they reflect a sampling of the best web design and development books in my library.</p>
+	</div>
+
+	<div class="demo">
+		<nav id="tabs">
+			<h2>Select Country</h2>
+			<ul>
+				<li><a href="#tabs-1"><%= image_tag("flags/canada.png", :alt => "Canada") %></li>
+				<li><a href="#tabs-2"><%= image_tag("flags/france.png", :alt => "France") %></a></li>
+				<li><a href="#tabs-3"><%= image_tag("flags/germany.png", :alt => "Germany") %></a></li>
+				<li><a href="#tabs-4"><%= image_tag("flags/italy.png", :alt => "Italy") %></a></li>	
+				<li><a href="#tabs-5"><%= image_tag("flags/uk.png", :alt => "United Kingdom") %></a></li>
+				<li><a href="#tabs-6"><%= image_tag("flags/us.png", :alt => "United States") %></a></li>
+			</ul>
+		
+			<div id="tabs-1">
+				<%= render 'pages/canada' %>
+			</div>
+			<div id="tabs-2">
+			</div>
+			<div id="tabs-3">
+			</div>
+			<div id="tabs-4">
+			</div>
+			<div id="tabs-5">
+				<%= render 'pages/uk' %>
+			</div>
+			<div id="tabs-6">
+			</div>
+		
+		</nav>
+	</div><!-- End demo -->
+
+			<p>If you choose to click through to Amazon and purchase one of the recommended titles, I will receive a small referral fee which will help offset the cost of hosting this site. Your support is greatly appreciated, Thank you.</p>
+
+	
+	</div> <!-- end class yui3-u-1 first -->
+
+	<div class="pagination">
+		<a href="map#top" class="prev-page">
+			<<&nbsp;<span class="number">Map</span></a>
+		<a href="colophon#top" class="next-page">
+		    <span class="number">Colophon</span>&nbsp;>></a>
+	</div> <!-- end class pagination -->
+
+	<aside id="cont" class="footnotes">
+		<div class="demo other">			
+			<h2>Footnotes</h2>
+			<ol class="collapse">
+			</ol>
+		</div> 
+	</aside> <!-- end class footnotes -->
+
+	<aside id="cont" class="comments">
+		<div class="demo other">			
+			<h2>Comments</h2>
+			<ol class="collapse">
+				<div id="disqus_thread"></div>
+				<script type="text/javascript">// Discus Comments
+				var disqus_developer = 1; // developer mode is on
+				var disqus_shortname = 'bookofjack';
+				var disqus_identifer = '/intro/';
+				var disqus_url = 'http://bookofjack.org/intro.html';
+				/* * * DON'T EDIT BELOW THIS LINE * * */
+				(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				})();// End Discus 	
+				</script>				
+			</ol>
+		</div>
+	</aside> <!-- end class comments -->
+</article> <!-- end class main -->

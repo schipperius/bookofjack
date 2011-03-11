@@ -1,0 +1,33 @@
+<article class="yui3-u-1 signup">
+		
+	<h1>SignUp</h1>
+
+	<%= form_for(@user) do |f| %> <!-- something is wrong with this line of code -->
+	
+	<%= render 'layouts/error_messages', :object => f.object %>
+
+	  <div class="field">
+	    <%= f.label :name %><br />
+	    <%= f.text_field :name %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :email %><br />
+	    <%= f.text_field :email %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :password %><br />
+	    <%= f.password_field :password %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :password_confirmation, "Confirmation" %><br />
+	    <%= f.password_field :password_confirmation %>
+	  </div>
+	  <div class="actions">
+	    <%= f.submit "SignUp" %>
+	  </div>
+	
+	<% end %>
+
+</article>
+
+

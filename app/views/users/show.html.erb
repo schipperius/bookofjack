@@ -1,0 +1,20 @@
+<article class="yui3-u-1">
+
+	<table id="user-profile" class="profile" summary="Profile information">
+	  <tr>
+	    <td class="user-info">
+	      <h1>
+	        <%= gravatar_for @user %>
+	        <%= @user.name %>
+	      </h1>
+				<h2><%= @user.email %></h2>
+			</td>
+	   <td class="sidebar round">
+	      <strong>Name</strong> <%= @user.name %><br />
+	      <strong>URL</strong>  <%= link_to user_path(@user), @user %>
+	    </td>
+	  </tr>
+	</table>
+
+</article> <!-- end class main -->
+

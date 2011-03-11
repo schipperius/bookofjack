@@ -1,0 +1,12 @@
+<nav class="yui3-u-1">
+	<% if signed_in? %>
+		<li><%= link_to "My Profile", current_user, :class => "signup_button round" %></li>
+	<% else %>
+		<%= link_to "Contribute", '#', :class => "signup_button round" %>
+	 <% end %>
+</nav>
+
+<article class="yui3-u-1 gutter">
+<br />
+<p>This site is in development, expected go live date, June 30th, 2011.</p>
+</article>

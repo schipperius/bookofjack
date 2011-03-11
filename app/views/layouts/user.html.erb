@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en-CA">
+
+	<head>
+		
+    <title><%= title %></title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+		
+  	<%= csrf_meta_tag %>
+		<%= render 'layouts/stylesheets' %>
+
+	</head>
+	
+  <body id="container"> <!-- container ID for grids layout from Yahoo UI-->
+	
+	  <%= render 'layouts/header' %>
+			
+      <section class="yui3-g round">
+				<div class="yui3-u-1">
+	        <% flash.each do |key, value| %>
+	       <div class="flash <%= key %>"><%= value %></div>
+	        <% end %>
+				</div>
+        <%= yield %>
+      </section>
+
+		<%= render 'layouts/javascripts' %>
+
+  </body>
+
+</html>
+
