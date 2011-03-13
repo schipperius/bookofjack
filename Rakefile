@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Boj::Application.load_tasks
+bookofjack::Application.load_tasks
