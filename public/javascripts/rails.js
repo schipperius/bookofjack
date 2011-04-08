@@ -1,4 +1,4 @@
-/**
+/*
  * Unobtrusive scripting adapter for jQuery
  *
  * Requires jQuery 1.4.3 or later.
